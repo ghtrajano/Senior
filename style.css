@@ -1,0 +1,101 @@
+/* documento css*/
+/*setar cor para a página*/
+body {
+ background-color: grey;
+}
+/*esconder checkbox para seleção de abas*/
+#check {
+	display: none;
+}
+/*setar tamanho e tipo do icone para seleção de abas*/
+#icone {
+	cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+/*setar tamanho, tipo, cor e transition da barra de navegação*/
+.barra {
+    background: #333;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+}
+
+.navegacao {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+.navegacao a {
+    text-decoration: none;
+}
+/*setar tamanho, tipo, cores e transições para os links de abas*/
+.link {
+    background-color: #494950;
+    padding: 20px;
+    font-family: 'Arial';
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+
+.link:hover {
+    background-color: #050542;
+}
+/*transição para o checkbox quando checked*/
+#check:checked ~ .barra {
+    transform: translateX(300px);
+}
+
+#check:checked ~ .barra .navegacao a .link {
+    opacity: 1;
+    margin-top: 0;
+}
+
+.itens {
+    width: 350px;
+    margin-left: 70px;
+    font-size: 15pt;
+    background-color: #CDCDC1;
+}
+
+#check:checked ~ .itens {
+    margin-left: 300px;
+}
+/*posição para o checkbox 'perecível'*/
+#perecivel {
+    margin-top: 185px;
+    position: absolute;
+}
+/*posição para o label do checkbox 'perecível'*/
+#perecivelLabel {
+    margin-top: 180px;
+    margin-left: 30px;
+    position: absolute;
+}
+/*tamanho para o select de seleção de tipo de medidas*/
+#medidas {
+    margin-top: 35px;
+    margin-left: 169px;
+    position: absolute;
+    font-size: 11pt;
+    width: 173px;
+}
+/*tamanho do botão de submit*/
+#submit {
+    margin-top: 40px;
+    padding: 15px;
+}
+/*tamanho e posição da tabela da aba Localizar*/
+.tabela {
+    margin-left: 70px;
+    text-align: center;
+    background-color: #CDCDC1;
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html>
+<head>
+
+		<meta charset="utf-8">
+        <title>Desafio Senior/Cadastrar</title>
+    	<link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="scripts.js"></script>
+
+</head>
+
+<body>
+
+	<input type="checkbox" id="check">
+    <label id="icone" for="check"><img src="icone.png"></label>
+
+    <div class="barra">
+        <!-- Menu para escolha entre abas Cadastrar e Localizar-->
+        <nav class="navegacao">
+            <a href="cadastro.html"><div class="link">Cadastrar</div></a>
+            <a href="localizar.html"><div class="link">Localizar</div></a>
+        </nav>
+
+    </div>
+
+    <div class="itens">
+            
+            <form method="POST" onsubmit="return enviarDados();">
+                <table>
+                        <tr>    
+                                <!-- Campo para insersão do nome do item do tipo texto, obrigatório-->
+                                <td>Nome do Item: </td>
+                                <td><input type="text" name="nome" id="nome" required></td>
+                        </tr>
+                        <tr>
+                                <!-- Campo para escolha da unidade de medida do tipo select com opções-->
+                                <td>Unidade de medida: </td>
+
+                                <select name="medidas" id="medidas">
+                                   <option value="lt">Litro</option>
+                                   <option value="kg">Quilograma</option>
+                                   <option value="un">Unidade</option>
+                                </select>
+                        </tr>
+                        <tr>
+                                <!-- Campo para insersão da quantidade de produto, tipo number-->
+                                <td>Quantidade: </td>
+                                <td><input type="number" name="quantidade" id="quantidade"></td>
+                        </tr>
+                        <tr>
+                                <!-- Campo para insersão do preço do tipo number, obrigatório-->
+                                <td>Preço: </td>
+                                <td><input type="number" name="preco" id="preco" required></td>
+                        </tr>
+
+                         <tr>
+                                <!-- Campo do tipo date para escolha da data de fabricação, obrigatório-->
+                                <td>Data de fabricação: </td>
+                                <td><input type="date" name="fabricacao" id="fabricacao" required></td>
+                        </tr>
+
+                         <tr>
+                                <!-- Campo do tipo date para escolha da data de validade, obrigatório-->
+                                <td>Data de validade: </td>
+                                <td><input type="date" name="validade" id="validade" disabled="true"></td>
+                        </tr>
+   
+                        <tr>
+                                <!-- Checkbox para setar se o produto é perecível-->
+                                <input type="checkbox" id="perecivel" name="perecivel"
+                                        value="true" onclick="return verificaCheck();" />
+                                <label id="perecivelLabel" for="perecivel">Produto perecível</label>                
+                        </tr>
+
+                        <tr>
+                            <!-- input do tipo submit para enviar os dados digitados-->
+                            <td><input type="submit" id="submit" value="Enviar Dados"></td>
+                        </tr>
+
+                </table>
+        </form>
+
+    </div>
+
+    <script>
+
+    </script>
+
+</body>
+</html>
